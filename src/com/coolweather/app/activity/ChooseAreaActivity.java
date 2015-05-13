@@ -90,14 +90,12 @@ public class ChooseAreaActivity extends Activity {
 				// TODO Auto-generated method stub
 				if (currentLevel == LEVEL_PROVINCE) {
 					selectedProvince = provinceList.get(index);
-					//Log.e("ChooseAreaActivity", "LEVEL_PROVINCE");
 					queryCities();
 				} else if (currentLevel == LEVEL_CITY) {
 					selectedCity = cityList.get(index);
-					//Log.e("ChooseAreaActivity", "LEVEL_CITY");
 					queryCounties();
 				}else if (currentLevel == LEVEL_COUNTY){
-					
+
 					String countyCode = countyList.get(index).getCountyCode();
 					Intent intent = new Intent (ChooseAreaActivity.this,WeatherActivity.class);
 					intent.putExtra("county_code", countyCode);				
